@@ -7,7 +7,6 @@
 //
 
 #import "CHHomeViewController.h"
-#import "UIButton+Countdown.h"
 
 @interface CHHomeViewController ()
 @property (nonatomic, strong) UIButton *countdownButton;
@@ -29,7 +28,7 @@
 }
 
 - (void)countdownButtonPressed:(UIButton *)button {
-    [button startWithSeconds:60];
+    [button startWithSeconds:5];
     //  Other ..
 }
 
@@ -37,11 +36,11 @@
     if (!_countdownButton) {
         _countdownButton = [[UIButton alloc] init];
         _countdownButton.titleLabel.font = [UIFont systemFontOfSize:15];
-        [_countdownButton setTitle:@"发送验证码" forState:UIControlStateNormal];
-        [_countdownButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+        [_countdownButton setTitle:kSendVerifyCode forState:UIControlStateNormal];
+        [_countdownButton setTitleColor:kColor(orangeColor) forState:UIControlStateNormal];
         _countdownButton.layer.cornerRadius = 5;
         _countdownButton.layer.masksToBounds = YES;
-        _countdownButton.layer.borderColor = [UIColor orangeColor].CGColor;
+        _countdownButton.layer.borderColor = kCGColor(orangeColor);
         _countdownButton.layer.borderWidth = 0.8;
         [_countdownButton addTarget:self action:@selector(countdownButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     }

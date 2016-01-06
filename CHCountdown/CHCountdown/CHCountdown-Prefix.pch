@@ -1,0 +1,20 @@
+//
+//  CHCountdown-Prefix.pch
+//  CHCountdown
+//
+//  Created by arnoldxiao on 16/1/6.
+//  Copyright © 2016年 Personal. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "UIButton+Countdown.h"
+
+#define kSendVerifyCode             @"发送验证码"
+#define kResendVerifyCode(sec)      [NSString stringWithFormat:@"重新发送(%ds)", sec]
+#define kColor(color)               [UIColor color]
+#define kCGColor(color)             [UIColor color].CGColor
+
+#endif
