@@ -28,7 +28,9 @@
 }
 
 - (void)countdownButtonPressed:(UIButton *)button {
-    [button startWithSeconds:5];
+    //  You can change the seconds ..
+    [button startWithSeconds:60];
+    
     //  Other ..
 }
 
