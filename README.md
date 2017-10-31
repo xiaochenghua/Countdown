@@ -1,2 +1,3 @@
 # Countdown
-GCD实现倒计时功能 Demo
+
+发送验证码的倒计时视图
